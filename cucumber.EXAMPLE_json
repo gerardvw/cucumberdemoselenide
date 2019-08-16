@@ -1,0 +1,76 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "taking out dollars from my wallet",
+        "description": "",
+        "id": "wallet;taking-out-dollars-from-my-wallet",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 79180439,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I have 42 dollar in my wallet",
+            "match": {
+              "arguments": [
+                {
+                  "val": "42",
+                  "offset": 7
+                }
+              ],
+              "location": "Stepdefs.I_have_dollar_in_my_wallet(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 53741,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I take out 5 dollar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 11
+                }
+              ],
+              "location": "Stepdefs.iTakeOut(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1463736,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "my wallet should have 37 dollar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "37",
+                  "offset": 22
+                }
+              ],
+              "location": "Stepdefs.myWalletShouldHaveDollar(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Wallet",
+    "description": "",
+    "id": "wallet",
+    "keyword": "Feature",
+    "uri": "features/wallet.feature"
+  }
+]

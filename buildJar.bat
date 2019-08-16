@@ -1,0 +1,1 @@
+mvn -Pjar-with-dependencies verify
