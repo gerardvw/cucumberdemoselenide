@@ -32,6 +32,10 @@ public class EnvironmentProperties {
         return Long.parseLong(getProperty("timeoutinseconds"));
     }
 
+    public static Long getTimeoutInMilliSeconds() {
+        return Long.parseLong(getProperty("timeoutinseconds")) * 1000;
+    }
+
     public static Long getSleepInMillis() {
         return Long.parseLong(getProperty("sleepinmillis"));
     }

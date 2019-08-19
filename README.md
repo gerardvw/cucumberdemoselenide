@@ -1,6 +1,7 @@
-# Demo project to show simple cucumber scenario with java code
+# Demo project to show simple cucumber scenario with java code using Selenide
   
 Subjects which are covered in this demo project:
+- Using Selenide, e.g. for navigation and locating elements
 - Basic concept of feature and scenario by wallet feature
 - PageObjects, with wait functions until page is loaded and actions are done 
 - Running scenario's in parallel by using multiple threads

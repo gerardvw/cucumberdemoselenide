@@ -7,13 +7,16 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 
+import static com.codeborne.selenide.Selenide.open;
+
 public class SearchSteps {
 
-    private HomePage homePage = new HomePage();
+    private HomePage homePage;
     private int actualItemNumber = -1;
 
     @Given("^homepage is opened$")
     public void homepageIsOpened() {
+        homePage = open("", HomePage.class);
         homePage.navigate();
     }
 

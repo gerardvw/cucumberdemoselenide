@@ -1,17 +1,16 @@
 package pages;
 
-import org.openqa.selenium.support.PageFactory;
-import util.drivermanagers.DriverManager;
 import util.properties.EnvironmentProperties;
+
+import static com.codeborne.selenide.Selenide.open;
 
 public abstract class BasePage {
 
     public BasePage() {
-        PageFactory.initElements(DriverManager.getWebdriver(), this);
     }
 
     public void navigate() {
-        DriverManager.getWebdriver().navigate().to(EnvironmentProperties.getBaseUrl() + getRelativeUrl());
+        open(EnvironmentProperties.getBaseUrl() + getRelativeUrl());
         waitUntilPageIsLoaded();
     }
 
