@@ -1,10 +1,13 @@
 package steps;
 
 import com.codeborne.selenide.Configuration;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import util.*;
 
 import util.properties.EnvironmentProperties;
@@ -31,11 +34,11 @@ public class ScenarioManager {
 
     @After
     public void afterScenario(Scenario scenario) {
-//        if (scenario.isFailed()) {
-//            // Take a screenshot...
-//            final byte[] screenshot = ((TakesScreenshot) DriverManager.getWebdriver()).getScreenshotAs(OutputType.BYTES);
-//            scenario.embed(screenshot, "image/png"); // ... and embed it in the report.
-//        }
+        if (scenario.isFailed()) {
+            // Take a screenshot...
+            final byte[] screenshot = ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.embed(screenshot, "image/png"); // ... and embed it in the report.
+        }
     }
 
 }
